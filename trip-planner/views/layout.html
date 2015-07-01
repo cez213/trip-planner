@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Trip Planner</title>
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyUAh-d9W_5DHrj9QCVJwFbQ5uVZy3NHI&sensor=true"></script>
+ 	<script type="text/javascript" src="/javascripts/initializeMap.js"></script>
+</head>
+
+<body>
+    <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-items">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Trip Planner</a>
+            </div>
+            <div id="nav-items" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/hotel">Book Hotel</a></li>
+                    <li><a href="/restaurant">Resturant Reservations</a></li>
+                    <li><a href="/activity">Book Activities</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container content">
+        {% block content %}{% endblock %}
+    </div>
+    <div id="footer" class="container text-muted">
+        TRIP PLANNER for FullstackAcademy
+    </div>
+</body>
+
+</html>

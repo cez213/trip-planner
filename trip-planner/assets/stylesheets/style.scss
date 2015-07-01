@@ -1,0 +1,75 @@
+body .section.lead{
+    clear: both;
+    padding-top: 70px;
+}
+
+@mixin clearfix() {
+    &::before, &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+.row {
+    @include clearfix();
+}
+
+#footer {
+    bottom: 0;
+    position: fixed;
+}
+
+$navbar-color: #333333;
+$navbar-text: #33CCFF;
+.navbar {
+    background: $navbar-color;
+    opacity: 0.8;
+    border: none;
+}
+
+.navbar-inverse .navbar-nav > li > a,
+.navbar-inverse .navbar-brand {
+    color: $navbar-text;
+}
+
+@for $n from 1 through 12 {
+	.col-md-#{$n}{
+		float: left;
+		padding: 0 2%;
+		width: percentage($n/12);
+	}
+}
+
+.sidebar{
+	float: right;
+	border: 3px solid green;
+
+}
+
+.map{
+	border: 3px solid red;
+}
+
+.container .content{
+	margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

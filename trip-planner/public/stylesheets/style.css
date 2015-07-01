@@ -1,8 +1,91 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+body .section.lead {
+  clear: both;
+  padding-top: 70px; }
 
-a {
-  color: #00B7FF;
-}
+.row::before, .row::after {
+  content: '';
+  display: block;
+  clear: both; }
+
+#footer {
+  bottom: 0;
+  position: fixed; }
+
+.navbar {
+  background: #333333;
+  opacity: 0.8;
+  border: none; }
+
+.navbar-inverse .navbar-nav > li > a,
+.navbar-inverse .navbar-brand {
+  color: #33CCFF; }
+
+.col-md-1 {
+  float: left;
+  padding: 0 2%;
+  width: 8.33333%; }
+
+.col-md-2 {
+  float: left;
+  padding: 0 2%;
+  width: 16.66667%; }
+
+.col-md-3 {
+  float: left;
+  padding: 0 2%;
+  width: 25%; }
+
+.col-md-4 {
+  float: left;
+  padding: 0 2%;
+  width: 33.33333%; }
+
+.col-md-5 {
+  float: left;
+  padding: 0 2%;
+  width: 41.66667%; }
+
+.col-md-6 {
+  float: left;
+  padding: 0 2%;
+  width: 50%; }
+
+.col-md-7 {
+  float: left;
+  padding: 0 2%;
+  width: 58.33333%; }
+
+.col-md-8 {
+  float: left;
+  padding: 0 2%;
+  width: 66.66667%; }
+
+.col-md-9 {
+  float: left;
+  padding: 0 2%;
+  width: 75%; }
+
+.col-md-10 {
+  float: left;
+  padding: 0 2%;
+  width: 83.33333%; }
+
+.col-md-11 {
+  float: left;
+  padding: 0 2%;
+  width: 91.66667%; }
+
+.col-md-12 {
+  float: left;
+  padding: 0 2%;
+  width: 100%; }
+
+.sidebar {
+  float: right;
+  border: 3px solid green; }
+
+.map {
+  border: 3px solid red; }
+
+.container .content {
+  margin: 0; }

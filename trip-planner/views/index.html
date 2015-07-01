@@ -1,0 +1,42 @@
+{% extends "layout.html" %} {% block content %}
+<div class="section lead">
+    <div class="container">
+        <div class="row">
+            <div id="mapId">
+                <div class="col-md-8 map">
+                    <!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
+                    <!--                 <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=56.506174,79.013672&amp;t=m&amp;z=4&amp;output=embed"></iframe> -->
+                </div>
+            </div>
+        </div>
+        <!-- row -->
+    </div>
+    <!-- container -->
+</div>
+<!-- section -->
+<div class="section-colored">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 sidebar row">
+                <select name="Hotels">
+                    {% for hotel in all_hotels %}
+                    <option value={{hotel.name}}>{{hotel.name}}</option>
+                    {% endfor %}
+                </select>
+                <select name="Restaurants">
+                    {% for restaurant in all_restaurants %}
+                    <option value={{restaurant.name}}>{{restaurant.name}}</option>
+                    {% endfor %}
+                </select>
+                <select name="ThingsToDo">
+                    {% for activity in all_things_to_do %}
+                    <option value={{activity.name}}>{{activity.name}}</option>
+                    {% endfor %}
+                </select>
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </div><!-- /.section-colored -->
+</div>
+</div>
+</div>
+{% endblock %}
