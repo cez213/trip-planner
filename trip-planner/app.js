@@ -41,7 +41,7 @@ app.use(
     })
 );
 app.use(express.static(path.join(__dirname, '/public')));
-app.use(express.static(path.join(__dirname, '/bower_components')));
+app.use('/bower_components',express.static(path.join(__dirname, '/bower_components')));
 
 app.use('/', routes);
 // app.use('/users', users);

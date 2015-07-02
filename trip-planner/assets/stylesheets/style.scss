@@ -1,59 +1,44 @@
-body .section.lead{
-    clear: both;
-    padding-top: 70px;
+body{
+    padding-top: 50px;
 }
 
-@mixin clearfix() {
-    &::before, &::after {
-        content: '';
-        display: block;
-        clear: both;
+$black-grey: #333333;
+$medium-blue: #33CCFF;
+
+
+div.navbar{
+    background: $black-grey;
+    opacity: 0.8;
+    border: darken($black-grey, 10%);
+    a{
+        color: $medium-blue;
+    }
+    .active {
+        background: darken(#6666FF, 10%);
+        box-shadow: inset 0 0 10px darken(#6666FF, 20%);
+    }
+    a:hover{
+        color: lighten($medium-blue, 50%);
+        background: #6666FF;
+        cursor: pointer;
     }
 }
 
-.row {
-    @include clearfix();
-}
-
-#footer {
-    bottom: 0;
+#map-container{
     position: fixed;
+    width: inherit;
 }
 
-$navbar-color: #333333;
-$navbar-text: #33CCFF;
-.navbar {
-    background: $navbar-color;
-    opacity: 0.8;
-    border: none;
+#map-canvas{
+    height: calc(100vh - 50px);
 }
 
-.navbar-inverse .navbar-nav > li > a,
-.navbar-inverse .navbar-brand {
-    color: $navbar-text;
-}
+/* .col-sx-4{
+    float: right;
+} */
 
-@for $n from 1 through 12 {
-	.col-md-#{$n}{
-		float: left;
-		padding: 0 2%;
-		width: percentage($n/12);
-	}
-}
 
-.sidebar{
-	float: right;
-	border: 3px solid green;
 
-}
-
-.map{
-	border: 3px solid red;
-}
-
-.container .content{
-	margin: 0;
-}
 
 
 
