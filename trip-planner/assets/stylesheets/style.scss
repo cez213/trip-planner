@@ -1,10 +1,11 @@
-body{
-    padding-top: 50px;
-}
-
 $black-grey: #333333;
 $medium-blue: #33CCFF;
+$panel-background: #66C3BC;
 
+body{
+    padding-top: 50px;
+    background: lighten(#BEBEBE, 5%);
+}
 
 div.navbar{
     background: $black-grey;
@@ -13,16 +14,20 @@ div.navbar{
     a{
         color: $medium-blue;
     }
-    .active {
-        background: darken(#6666FF, 10%);
-        box-shadow: inset 0 0 10px darken(#6666FF, 20%);
+    .active > a{
+        color: #5DF387;
     }
+/*     .active {
+        color: darken(#6666FF, 10%);
+        //box-shadow: inset 0 0 10px darken(#6666FF, 20%);
+    } */
     a:hover{
         color: lighten($medium-blue, 50%);
         background: #6666FF;
         cursor: pointer;
     }
 }
+
 
 #map-container{
     position: fixed;
@@ -33,14 +38,82 @@ div.navbar{
     height: calc(100vh - 50px);
 }
 
-/* .col-sx-4{
-    float: right;
-} */
+#sidebar{
+    padding-left: 0;
+}
 
+.panel{
+    border: none;
+}
 
+.panel .panel-body{
+    background: lighten($black-grey,70%);
+    border-radius: 3px;
+}
 
+.panel-heading{
+    background: lighten($black-grey, 5%);
+    border-radius: 3px;
+    display: block;
+}
 
+.btn-primary{
+    border-radius: 50%;
+    border-color: darken(#A0F1F9, 10%);
+    background: lighten($black-grey, 5%);
+    &.current{
+       /*  background: lighten($medium-blue, 10%); */
+       background: darken(#A0F1F9, 10%);
+    }
 
+}
+
+.btn-danger{
+    background: #556CF6;
+    border: none;
+    border-radius: 50%;
+    &.btn-danger:hover{
+        /* background: darken(#66C3BC, 40%); */
+        background: lighten(#556CF6, 10%);
+        border: none;
+    }
+}
+.ex-btn{
+    background: #FF2B58;
+    &.btn-danger:hover{
+        background: darken(#FF2B58, 20%);
+        border: none;
+    }
+}
+
+select{
+    width: calc(100% - 50px);
+}
+
+h4{
+    /* color: lighten($black-grey, 10%); */
+    color: darken($medium-blue, 40%);
+}
+
+#day-title{
+    text-align: center;
+    > span{
+        padding: 5px;
+        border: 1.5px solid $black-grey;
+        border-radius: 5px;
+        margin-bottom: 2px;   
+    }
+}
+
+.itinerary-item{
+    .title{
+        display: inline-block;
+        width: calc(100% - 40px);
+    }
+    .list-group{
+
+    }
+}
 
 
 
